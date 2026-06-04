@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Source Sans Pro', sans-serif;
+	background-color: #F9FAFB;
+	color: #1F2937;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Playfair Display', serif;
+}
+
+@layer components {
+	.btn {
+		@apply px-6 py-2 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2;
+	}
+	
+	.btn-primary {
+		@apply bg-primary text-white hover:bg-primary/90 focus:ring-primary;
+	}
+	
+	.btn-secondary {
+		@apply bg-secondary text-white hover:bg-secondary/90 focus:ring-secondary;
+	}
+	
+	.btn-outline {
+		@apply border-2 border-primary text-primary hover:bg-primary hover:text-white focus:ring-primary;
+	}
+	
+	.card {
+		@apply bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden;
+	}
+	
+	.input {
+		@apply w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all duration-300;
+	}
+	
+	.tag {
+		@apply inline-block px-3 py-1 text-sm rounded-full bg-primary/10 text-primary hover:bg-primary/20 cursor-pointer transition-colors;
+	}
+}
